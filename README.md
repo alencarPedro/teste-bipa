@@ -41,17 +41,18 @@ My focus was on creating a modern, simple and user-friendly interface since the 
 
 ## How long did you spend on this project?
 
-4 hours
+5 hours
 
 ## Did you make any trade-offs for this project? What would you have done differently with more time?
 
 I didnt implemented filtering or sorting of any kind, when you talk about a list or table thats one of the best features it could have, In this case was a time limitation and also the API didnt had any params that i could use to filter directly on the fectch function.
 
 With more time, I would have added more advanced filtering, maybe treating the data that is being fetched so that I could use a seach bar based on the nodes props. Also a sorting implementation to be able to asc/desc the table columns data.
+I also would have added a cards view for smaller screens, that would improve even better the user experience.
 
 ## What do you think is the weakest part of your project?
 
-No advanced filtering/sorting for the table
+No advanced filtering/sorting for the table and the mobile responsiveness could had a different component to see the list instead of the table, since the screen has smaller width.
 
 ## Is there any other information you’d like us to know?
 
