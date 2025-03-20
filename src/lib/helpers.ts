@@ -23,11 +23,18 @@ export const truncatePublicKey = (key: string): string => {
 	return `${key.substring(0, 8)}...${key.substring(key.length - 8)}`;
 };
 
+import { toasts } from './stores/toasts.js';
+
 export const copyToClipboard = (text: string) => {
 	navigator.clipboard
 		.writeText(text)
-		.then(() => alert('Public key copied to clipboard!'))
-		.catch((err) => console.error('Failed to copy text: ', err));
+		.then(() => {
+			toasts.success('Public key copied to clipboard!');
+		})
+		.catch((err) => {
+			console.error('Failed to copy text: ', err);
+			toasts.error('Failed to copy text to clipboard');
+		});
 };
 
 // Helper function to paginate data
