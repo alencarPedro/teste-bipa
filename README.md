@@ -1,24 +1,27 @@
-# create-svelte
+## Libraries & frameworks used
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+--Core framework--
+SvelteKit
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+--UI & Styling--
+TailwindCSS 4.0
 
-## Creating a project
+--Testing--
+Vitest
+@testing-library/svelte
+@testing-library/jest-dom
 
-If you're seeing this, you've probably already done this step. Congrats!
+--Tools--
+TypeScript
+Vite
+ESLint
+Prettier
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Steps to run
 
-# create a new project in my-app
-npx sv create my-app
-```
+Once you've cloned the repository, install the project depencendies with `npm install` (or `pnpm install` or `yarn`);
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+After that you can start the developement server with the command:
 
 ```bash
 npm run dev
@@ -27,32 +30,29 @@ npm run dev
 npm run dev -- --open
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+## What areas of the web app did you focus on?
 
-## Building
+I focused on the UI and Style, since the data fetch was easy and the data was already structured, I could focus on making a responsive, modern and simple interface. To do that I created a table component to display the fetched data and also added a pagination component to better display it.
+With the user experience I try to make the table rows easy to understand and also added a clipboard button to copy the node public key, that way I didn't need to display the entire key.
 
-To build your library:
+## What was the reason for your focus? What problems were you trying to solve?
 
-```bash
-npm run package
-```
+My focus was on creating a modern, simple and user-friendly interface since the data fetching was straightfoward. I solved the problem of displaying potencially large amounts of data by implementing pagination and created formatted displays for complex data like timestamps and crypto amounts.
 
-To create a production version of your showcase app:
+## How long did you spend on this project?
 
-```bash
-npm run build
-```
+4 hours
 
-You can preview the production build with `npm run preview`.
+## Did you make any trade-offs for this project? What would you have done differently with more time?
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+I didnt implemented filtering or sorting of any kind, when you talk about a list or table thats one of the best features it could have, In this case was a time limitation and also the API didnt had any params that i could use to filter directly on the fectch function.
 
-## Publishing
+With more time, I would have added more advanced filtering, maybe treating the data that is being fetched so that I could use a seach bar based on the nodes props. Also a sorting implementation to be able to asc/desc the table columns data.
 
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
+## What do you think is the weakest part of your project?
 
-To publish your library to [npm](https://www.npmjs.com):
+No advanced filtering/sorting for the table
 
-```bash
-npm publish
-```
+## Is there any other information you’d like us to know?
+
+In my opnion the project is organized with clear separation between components, data fetching and helper functions. I used the SvelteKit and TailwindCSS to build a modern interface a focused on given the user a really good experience with the pagination and data formating.
